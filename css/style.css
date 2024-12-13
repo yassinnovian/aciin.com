@@ -1,0 +1,268 @@
+/*membuat warna,dan mudah untuk dicari di color atau dll*/
+:root { 
+    --peach: #ffdab9;
+    --dark: #2f4f4f;
+    --cyan: #e0ffff;
+    --brown: #3e2723;
+    --gree: #25d366;
+}
+* {
+    box-sizing: border-box;
+}
+html,body {
+    padding:0;
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: teal;
+}
+/* segala bentuk div id= itu pake awalan # */
+#nav-container {
+    background-color: var(--cyan);
+    position: sticky;
+    top: 0px;
+}
+.nav-flex {
+    /* membuat jajaran yg di tag akan kesamping */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60px;
+}  
+.nav-flex label,#humberger {
+    display: none;
+} 
+.nav-brand h2 {
+    
+}
+nav ul {
+    /*menghilangkan titik hitam pada ul dan li */
+    list-style-type: none;
+    /*membuat tag link yang berbaris kebawah menjadi satu kesamping */
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a {
+    display: block;
+    color: maroon;
+    /* kiri kanan 16, atas bawah 0 */
+    padding: 0 16px;
+    /*membuat garis bawah link hilang */
+    text-decoration: none;
+    /*membuat teks kapital semua */
+    text-transform: uppercase;
+    /*membuat teks menjadi ketengah dengan mengikuti heigh nav flex atau elemen pembukusnya */
+    line-height: 60px;
+}
+nav ul li a:hover {
+    background-color: var(--peach);
+    transition: all 0.3s;
+}
+.nav-brand h2 {
+    margin: 14px 0 0 10px;
+    margin-right: 520px;
+    color: var(--dark);
+}
+#Hero-container {
+    background-image: url(../image/f67292d591b38184b5bbd5122a0dfd4f.jpg);
+    /*Jika viewport tinggi 1000px, maka 1vh akan sama dengan 10px.*/
+     height: 100vh;
+     /*membuat gambar menjadi satu dan tidak mengulanginya*/
+     background-repeat: no-repeat;
+     /*membuat image mengikuti  cover pembukus elemen */
+     background-size: cover;
+     /* tiga  item dibawah ini membuat teks otomatis ditenngah horizontal dan vertikal */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     /* ketika digeser membuat teks diam di tempat */
+     background-attachment: fixed;
+}
+/* bagian teks pada layar utama */
+.text h1 {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+color: #2f4f4f;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text p {
+    color: #333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text a {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.button {
+    /* menghilangkan garis bawah pada link */
+     text-decoration: none;
+     display: inline-block;
+     margin-top: 10px;
+     background-color: var(--gree);
+     padding: 10px;
+     color: var(--brown);
+     font-size: 16px;
+     border-radius: 10px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.button:hover {
+    background-color: var(--dark);
+    color: var(--cyan);
+}
+
+.text {
+    text-align:center;
+    color: azure;
+    font-size: 20px;
+}
+/* brand */
+.container-info-panel {
+    width: 100%;
+    display: flex;
+    /*memberi space kesamping pada font awesome */
+    justify-content: space-evenly;
+    /* ketika dibuka dilayar kecil maka yang awalnya 4 kesamping akan akan dua susun kebawah */
+    flex-wrap: wrap;
+}
+.info-panel {
+    margin-top: 50px;
+    /* membuat text dibawah fontawesome otomatis tengah */
+    text-align: center;
+}
+.judul-info-panel {
+    font-size: 20px;
+    /*membuat tulisan menjadi tebal */
+    font-weight: bold;
+}
+.info-panel p {
+    font-size: 14px;
+}
+.info-panel .fab,.fas {
+    font-size: 40px;
+    color: salmon;
+    margin-bottom: 15px;
+}
+.fab:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.fas:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+main {
+    width: 80%;
+    margin: auto;
+}
+/* about */
+#about h1 {
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px;
+}
+#about .about-deskripsi {
+    text-align: center;
+    color: var(--dark);
+    font-size: 18px;
+}
+.about-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px auto;
+}
+.about-image,.about-text {
+    width: 50%;
+    margin: 14px;
+}
+.about-image img {
+    width: 100%;
+    object-fit: cover;
+}
+.clear {
+    clear: left;
+}
+.about-text img {
+    width: 70%;
+    flex-direction: column;
+}
+.tombol2 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    background-color: azure;
+    border: 1px solid black;
+}
+/* versi tablet */
+@media screen and (max-width:898px) {
+    /*tampilkan icon humberger */
+    #nav-container .nav-flex label {
+        display: inline-block;
+        color: var(--dark);
+        font-style: normal;
+        font-size: 32px;
+        padding: 8px;
+        margin-right: 40px;
+    }
+    /* susun ulang menu menjadi vertikal */
+    #nav-container .nav-flex {
+        width: 100%;
+    }
+    nav ul {
+        /* membuat pilihan di tablet yg semula berjejer kesamping menjadi kebawah */
+        flex-direction: column;
+        width: 100%;
+        /*menghilangkan pilihan yg berjejer kebawah */
+        position: absolute;
+        /* membuat pilihan muncul dibawah humberger */
+        top: 60px;
+        left: 0;
+    }
+    nav ul li a {
+        display: block;
+        color: var(--dark);
+        background-color: var(--cyan);
+        padding: 0 30px;
+        height: auto;
+    }
+    
+    /* menyembunyikan menu pilihan */
+    #nav-container nav {
+        display: none;
+    }
+    #nav-container .nav-flex input:checked ~ nav {
+        display: flex;
+    }
+    /* memunculkan menu ketika garis tiga atau humberger di klik */
+    .nav-brand h2 {
+       margin-right: 60px;
+    }
+    /* ini adalah bagian about */
+    .about-flex {
+        flex-direction: column;
+    }
+    /* membuat image dan text auto mengikuti besar versi tablet */
+    .about-image,.about-text {
+        width: auto;
+        margin-bottom: 50px;
+    }
+    /* pilihan */
+    .container-pilihan {
+        margin-bottom: 60px;
+    }
+/* ini bagian otomotif */
+    .about-text h2 {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #333;
+        margin-bottom: 40px;
+        }
+    .about-text p {
+        justify-content:center;  
+        }
+    /* button */
+}
